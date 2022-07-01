@@ -10,7 +10,8 @@ include("auth.php");
   <title>Home</title>
   <link rel="stylesheet" href="stylesheat.css">
   <link rel="shortcut icon" href="https://img.icons8.com/wired/64/000000/home-page.png" type="image/x-icon">
-
+  
+  
 </head>
 
 <body>
@@ -37,7 +38,7 @@ include("auth.php");
     <!--nav bar begins-->
     <div>
       <nav   id="navbar">
-        <div class="logo"> <img src="logos\logo.png" alt="main-logo" style="height: 45px; width: 100px;" srcset=""></div>
+        <div class="logo"> <h1 style="font-size:33px">Fir-ed</h1></div>
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">
           <li class="diffcol"><a href="index.php">Home</a></li>
@@ -50,116 +51,8 @@ include("auth.php");
         </ul>
       </nav>
 
-      <style>
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-        body{
-
-        
-        font-family: 'Baloo Chettan 2', cursive;
-    line-height: 1.5;
-}
-
-
-
-        nav {
-          background: #000;
-          color: #fff;
-          display: flex;
-          justify-content: space-between;
-          align-item:center;
-        }
-
-        nav .mainMenu {
-          display: flex;
-          list-style: none;
-        }
-
-        nav .mainMenu li a {
-          display: inline-block;
-          padding: 15px;
-          text-decoration: none;
-          text-transform: uppercase;
-          color: #fff;
-          font-size: 1.5rem;
-        }
-
-        nav .mainMenu li a:hover {
-          background: rgb(255, 94, 0);
-        }
-
-        nav .openMenu {
-          font-size: 2rem;
-          margin: 20px;
-          display: none;
-          cursor: pointer;
-        }
-
-        nav .mainMenu .closeMenu,
-        .icons i {
-          font-size: 2rem;
-          display: none;
-          cursor: pointer;
-        }
-
-        nav .logo {
-          margin: 6px;
-          font-size: 25px;
-          cursor: pointer;
-        }
-
-        @media(max-width: 800px) {
-          nav .mainMenu {
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 10;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #000;
-            transition: top 1s ease;
-            display: none;
-          }
-
-          nav .mainMenu .closeMenu {
-            display: block;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-          }
-
-          nav .openMenu {
-            display: block;
-          }
-
-          nav .mainMenu li a:hover {
-            background: none;
-            color: rgb(255, 123, 0);
-            font-size: 1.6rem;
-          }
-
-          .icons i {
-            display: inline-block;
-            padding: 12px;
-          }
-        }
-
-       
-    li.diffcol{
-      background-color: rgb(255, 145, 0);
-    }
-
-      </style>
-
-
-
-
+      <!-- navbar open and close script -->
+      
       <script>
         const mainMenu = document.querySelector('.mainMenu');
         const closeMenu = document.querySelector('.closeMenu');
@@ -175,12 +68,17 @@ include("auth.php");
         }
         
       </script>
-
     </div>
+<!-- nav ends -->
+     
 
+
+
+
+<!---------------Header section-------------->
 
     <div id="main">
-      <!--Header===-->
+      
       <header class="header">
         <div class="hero">
 
@@ -188,10 +86,13 @@ include("auth.php");
           <a href="Book-a-table.html" class="hero-button pulsate">Book a table</a>
 
       </header>
-      <!--End of Header==================-->
-      <!---Top button-->
+<!--End of Header==================-->
+
+<!---Top button-->
       <div>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <button onclick="window.location.href='#main'" id="myBtn" title="Go to top" href="#navbar">Top</button>
+
+        <!-- go to top script -->
         <script>
           mybutton = document.getElementById("myBtn");
 
@@ -207,15 +108,12 @@ include("auth.php");
           }
 
           // When the user clicks on the button, scroll to the top of the document
-          function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-          }
+          
         </script>
       </div>
+<!-- top button section ends here -->
 
-
-      <!---=====About Section=====-->
+<!---=====About Section=====-->
       <section id="about">
         <div>
           <h2 class="title-text">About </h2>
@@ -230,6 +128,7 @@ include("auth.php");
             </div>
           </article>
           <!--End of single item-->
+
           <!---Single item-->
           <article class="about">
             <div class="about-icon"><i class="fas fa-utensils"></i></div>
@@ -239,6 +138,7 @@ include("auth.php");
             </div>
           </article>
           <!--End of single item-->
+
           <!---Single item-->
           <article class="about">
             <div class="about-icon"><i class="fas fa-mortar-pestle"></i></div>
@@ -248,6 +148,7 @@ include("auth.php");
             </div>
           </article>
           <!--End of single item-->
+
           <!---Single item-->
           <article class="about">
             <div class="about-icon"><i class="fas fa-drumstick-bite"></i></div>
@@ -258,6 +159,7 @@ include("auth.php");
             </div>
           </article>
           <!--End of single item-->
+
           <!---Single item-->
           <article class="about">
             <div class="about-icon"><i class="fas fa-fish"></i></div>
@@ -268,6 +170,7 @@ include("auth.php");
             </div>
           </article>
           <!--End of single item-->
+
           <!---Single item-->
           <article class="about">
             <div class="about-icon"><i class="fas fa-pepper-hot "></i></div>
@@ -282,9 +185,9 @@ include("auth.php");
           <!--End of single item-->
         </div>
       </section>
+<!--=====End of About Section============-->
 
-      <!--=====End of About Section============-->
-      <!---Menu Section---=========-->
+<!---Menu Section---=========-->
       <section class="menu" id="menu">
         <article class="menu-image"></article>
         <article class="menu-text">
@@ -296,17 +199,18 @@ include("auth.php");
           </div>
         </article>
       </section>
-      <!---End of Menu Section============-->
+<!---End of Menu Section============-->
 
-      <!---Social Icons-->
+<!---Social Icons-->
       <section id="social-icons">
         <a href="facebook.com"><i class="fab fa-facebook facebook"></i></a>
         <a href="#"><i class="fab fa-twitter twitter"></i></a>
         <a href="#"><i class="fab fa-instagram instagram"></i></a>
         <a href="#"><i class="fab fa-google-plus plus"></i></a>
       </section>
-      <!--End of Social Icons-->
-      <!----------============Counter / Numbers-===================-->
+<!--End of Social Icons-->
+
+<!-- offered varieties----- -->
       <div>
         <h2 class="title-text">Varieties we Offer</h2>
       </div>
@@ -334,14 +238,14 @@ include("auth.php");
           <h3> Desserts</h3>
         </article>
       </section>
+<!--End of Counter===================-->
 
-      <!--End of Counter===================-->
-      <!--=======-----------Card Section-----====================-->
+ 
       
 
 
      
-      <!---footer========-->
+<!---footer========-->
       <footer class="footer">
 
         <div class="section-center">
@@ -352,7 +256,7 @@ include("auth.php");
 
       </footer>
 
-
+<!-- --end of footer-- -->
 
 
 
@@ -365,7 +269,7 @@ include("auth.php");
 
 
       
-      
+<!-- script files -->
      <script src="onClickMenu.js"></script>
 <!--Magnific POPup Jquery also-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

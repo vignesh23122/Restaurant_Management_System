@@ -1,6 +1,7 @@
 <?php
 session_start();
 // Destroying All Sessions
+session_destroy();
 if(session_destroy())
 {
 // Redirecting To Home Page

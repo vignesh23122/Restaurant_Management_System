@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
-<link rel="stylesheet" href="style.css"/>
-<link rel="stylesheet" href="css\font-awesome.min.css"/>
-<link rel="shortcut icon" href="https://img.icons8.com/fluent/48/000000/login-rounded-right.png" type="image/x-icon">
+<link rel="stylesheet" href="./styles/loginstyle.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+<link rel="shortcut icon" href="https://img.icons8.com/fluent/48/000000/login-rounded-right.png" type="image/x-icon">
+
 </head>
 <body>
 <?php
@@ -33,7 +33,7 @@ and password='".md5($password)."'";
          }else{
             function function_alert($message){
                 echo "<script>alert('$message');</script>";
-                echo "<div class='danger'>Click here to<a href='login.php'>Login</a> </div>";
+                echo "<div class='alet'>Click here to  <a href='login.php'>Login</a> </div>";
             }
             function_alert("Username or Password is incorrect");
         
@@ -42,23 +42,29 @@ and password='".md5($password)."'";
        
         
 ?>
-<div>
-<img src="logos\logo 2.png" alt="main-logo" style="height: 45px; width: 100px;" srcset=""></div>
-<div  class="form" align="center">
-<h1>Log In</h1>
-<form id="form-login" autocomplete="off" action="" method="post" name="login">
-<input style="margin-left: 2px;"type="text" name="username" placeholder="Username" required /><br>
-<div >
-<main><input type="password"  id="password" name="password"  placeholder="Password" required />
-<i style="margin-left: -25px; cursor:pointer;" class="bi bi-eye-slash" id="togglePassword"></i></main>
+<div class="lgtext">
+    <h1>Fri-ed</h1>
 </div>
 
-<input name="submit" type="submit" style="postion: absolute; right: 0;" value="Login" />
-</form>
+<div class="form">
+        <h1>Log In</h1>
+        <form class="form-login" autocomplete="off" action="" method="post" name="login">
+            <legend>Username</legend>
+            <input type="text" name="username" id="username" 
+            placeholder="username" required>
+            <legend>password</legend>
+            <main><input type="password" name="password" id="password" placeholder="password" required>
+            <i style="margin-left: -25px; cursor:pointer;" class="bi bi-eye-slash" id="togglePassword"></i>
+        </main>
+            
+            <button class="btn">Login</button>
+        </form>
 
 
-<p>Not registered yet? <a href='registration.php'>Register Here</a></p>
-</div>
+
+
+        <p>Not registered yet? <a href='registration.php'>Register Here</a></p>
+        </div>
 <?php } ?>
 <script src="app.js">
 </script>

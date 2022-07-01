@@ -3,14 +3,120 @@
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar{
+    background: transparent;
+    width: 1px;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+@font-face{
+    font-family: beyond;
+    src: url(./fonts/beyond_the_mountains.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
 .title-text{
     font-size: 40px;
     text-align: center;
 }
 body{
-    font-family: 'Baloo Chettan 2', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.5;
 }
+/* -------------navigation bar------------ */
+
+nav {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  nav .mainMenu li a:hover {
+    background: rgb(255, 94, 0);
+  }
+
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+
+ 
+
+  @media(max-width: 800px) {
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      transition: right 5s linear;
+      display: none;
+    }
+
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    nav .openMenu {
+      display: block;
+    }
+
+    nav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
+      font-size: 1.6rem;
+    }
+
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  }
+
+ 
+li.diffcol{
+background-color: rgb(255, 145, 0);
+}
+/* --------navigation ends-------- */
+
 
 
 
@@ -19,8 +125,7 @@ body{
 .header{
    /* display: flex;*/
     min-height: 100vh;
-     background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
-     url( "#" )center/cover no-repeat fixed;
+     background:url( "./images/homepageimg.png" )center/cover no-repeat fixed;
     /* flex-direction: column;*/
     margin-top: auto; 
 }
@@ -35,8 +140,22 @@ body{
     height: 100%;
 }
 .hero .title{
-    color: #fff;
+    font-family: beyond;
+    color: white;
     font-size: 50px;
+    text-align: center;
+    font-size: 70px;
+    line-height:45px;
+    margin-bottom: 15px;
+
+}
+@media (max-width:400px) {
+    .hero .title{
+        color:black;
+        line-height:80px;
+        
+    }
+    
 }
 .hero-button{
     display: inline-block;
@@ -67,13 +186,13 @@ body{
 }
 @-webkit-keyframes pulsate{
     0% {
-        opacity: .3;
+        opacity: .7;
     }
     50% {
         opacity: 1;
     }
     100% {
-        opacity: .3;
+        opacity: .7;
     }
 
 }

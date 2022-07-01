@@ -11,7 +11,7 @@ include("auth.php");
     <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
    <link rel="shortcut icon" href="https://img.icons8.com/cute-clipart/64/000000/about.png" type="image/x-icon">
-   <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap" rel="stylesheet">
+   
   <style>
          * {
        box-sizing: border-box;
@@ -20,8 +20,16 @@ include("auth.php");
    
    }
    body{
-   font-family: 'Baloo Chettan 2', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.5;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 1px;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
 }
    nav {
        background: #000;
@@ -103,67 +111,81 @@ li.diffcol{
     }
     
                   
-
-*, *:before, *:after {
-  box-sizing: inherit;
+    .about-section{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    text-align:center;
+    background-color: #474e5d;
+    padding: 2em 0;
+    
 }
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+.about-section h1{
+  font-size:45px;
 }
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
 .about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
+  font-size:23px;
+ 
+}
+.row{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+gap:10px;
+place-items:center;
+max-width:50rem;
+margin:3em auto;
+padding:0 1em;
+}
+.card img{
+ display:none;
+}
+.card{
+  margin:.3em;
+  padding:20px;
+  background:whitesmoke;
+  max-width:39ch;
+  box-shadow: 5px 5px 30px 0 black;
+  border-radius:15px;
+ 
+}
+.card h2{
+  font-size:30px;
+}
+.card .title{
+  font-size:22px;
+  font-weight:400;
+}
+.card p{
+  margin:5px;
 }
 
-.container {
-  padding: 0 16px;
+.btn{
+  font-size:20px;
+  height:38px;
+  border-radius:10px;
+  padding:5px 8px;
+  text-align:center;
+  color:white;
+  background:black;
+  outline:none;
+  border:none;
+  border-radius:none;
+  cursor:pointer;
+  transition: transform .7s ease, background .9s ease;
+  
 }
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
+.btn:hover{
+  transform: scale(1.1,1.1);
+  background: rgb(255,94,0);
 }
-
-.title {
-  color: grey;
+@media(max-width:685px){
+    .row{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
    
     </style>
     
@@ -172,7 +194,7 @@ li.diffcol{
    <body>
            <nav class="wrapper">
                <div class="logo">
-               <img src="logos\logo.png" alt="main-logo" style="height: 45px; width: 100px;" srcset="">
+              <h1>Fri-ed</h1>
                </div>
                <div class="openMenu"><i class="fa fa-bars"></i></div>
                <ul class="mainMenu">
@@ -204,70 +226,70 @@ li.diffcol{
            function close(){
                mainMenu.style.top = '-100%';
            }</script>
-           <div>
+           
 
            <div class="about-section">
   <h1>About Us </h1>
-  <p>A sample page noting to show <br>
-   <img src="https://img.icons8.com/cotton/64/000000/rolling-on-the-floor-laughing-icon.png"/></p>
+  <p>Persons behind the project..<br>
+   </p>
 </div>
 
-<h2 style="text-align:center">Our Team</h2>
+<h2 style="text-align:center;margin-top:10px">Our Team</h2>
 <div class="row">
   
 
-  <div class="column">
+  
     <div class="card">
     <img src="https://img.icons8.com/emoji/48/000000/man-beard.png" alt="Mike" style="width:100%">
       <div class="container">
         <h2>Shanmugam</h2>
-        <p class="title" style="font-family:yellowtail">Chef</p>
+        <p class="title" >Master-Chef</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p><a href="mailto:shanmugam@gmail.com" >shanmugam@example.com</a></p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="mailto:shanmugamsekar153@gmail.com" >shanmugamsekar153@example.com</a></p>
+        <p><button class="btn">Contact</button></p>
       </div>
     </div>
-  </div>
-<div class="column">
     <div class="card">
-      "<img src="https://img.icons8.com/emoji/48/000000/man-beard.png" alt="Jane" style="width:100%">
+      <img src="https://img.icons8.com/emoji/48/000000/man-beard.png" alt="Jane" style="width:100%">
       <div class="container">
         <h2>Shristhidharan</h2>
-        <p class="title">CEO & Founder</p>
+        <p class="title">CEO</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p><a href="mailto:shrishtidharan@gmail.com">shristhidharan@example.com</a></p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="mailto:shrishtidharan@gmail.com">shristhidharan@gmail.com</a></p>
+        <p><button class="btn">Contact</button></p>
       </div>
     </div>
-  </div>
-  <div class="column">
+  
+
+  
+  
     <div class="card">
-    <img src="https://img.icons8.com/emoji/48/000000/man-beard.png" alt="John" style="width:100%">
+    <img src="https://img.icons8.com/emoji/48/000000/man-beard.png" alt="John">
       <div class="container">
         <h2>Srivignesh</h2>
-        <p class="title">Artist</p>
+        <p class="title">Founder & Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p><a href="mailto:srivigneshssv@gmail.com">srivigneshssv@gmail.com</a></p>
-        <p><button class="button">Contact</button></p>
+        <p><button class="btn">Contact</button></p>
       </div>
     </div>
-  </div>
-  <div class="column">
+  
+  
     <div class="card">
-      "<img src="https://img.icons8.com/emoji/48/000000/man-beard.png" alt="Jane" style="width:100%">
+      <img src="https://img.icons8.com/emoji/48/000000/man-beard.png" alt="Jane" style="width:100%">
       <div class="container">
         <h2>Suchit</h2>
-        <p class="title">Sponsor</p>
+        <p class="title">Enthusiast & Sponser</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p><a href="mailto:suchit@gmail.com">suchit@gmail.com</a></p>
-        <p><button class="button">Contact</button></p>
+        <p><a href="mailto:suchitchan2004@gmail.com">suchitchan2004@gmail.com</a></p>
+        <p><button class="btn">Contact</button></p>
       </div>
     </div>
-  </div>
+  
 </div>
       
               
-           </div>
+ 
           
    </body>
    </html>

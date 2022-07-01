@@ -4,6 +4,14 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
+::-webkit-scrollbar{
+    background: transparent;
+    width: 1px;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+
 .shadow {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
 }

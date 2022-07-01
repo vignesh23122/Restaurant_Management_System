@@ -21,8 +21,18 @@ include("auth.php");
             padding: 0;
 
         }body{
-        font-family: 'Baloo Chettan 2', cursive;
+        /* font-family: 'Baloo Chettan 2', cursive; */
+        
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.5;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 1px;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
 }
        
        
@@ -250,7 +260,7 @@ li.diffcol{
 <body>
 <div><nav class="wrapper">
         <div class="logo">
-        <img src="logos\logo.png" alt="main-logo" style="height: 45px; width: 100px;" srcset="">
+       <h1>Fri-ed</h1>
         </div>
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">

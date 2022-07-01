@@ -27,8 +27,19 @@ include("auth.php");
         }
 
         body{
-            font-family: 'Baloo Chettan 2', cursive;
+            /* font-family: 'Baloo Chettan 2', cursive; */
+			
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.5;
+	
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 1px;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
 }
         nav {
             background: #000;
@@ -122,6 +133,7 @@ li.diffcol{
       background-color: rgb(255, 145, 0);
       height: 70px;
     }
+	
        
     </style>
 
@@ -131,7 +143,7 @@ li.diffcol{
 <body>
     <nav >
         <div class="logo">
-        <img src="logos\logo.png" alt="main-logo" style="height: 45px; align-item:center; width: 100px;" srcset="">
+        <h1>Fri-ed</h1>
         </div>
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">
@@ -167,30 +179,7 @@ li.diffcol{
 </script>
 
 
-<div align="right" >
-    <style>
-       input[type='submit']{
-    padding: 10px 25px 8px;
-    color: #fff;
-    background-color: #0067ab;
-    text-shadow: rgba(0,0,0,0.24) 0 1px 0;
-    font-size: 16px;
-    box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
-    border: 1px solid #0164a5;
-    border-radius: 2px;
-    margin-top: 10px;
-    cursor:pointer;
-    
-   
-     
-    
-}
-input[type='submit']:hover {
-    background-color: #024978;}
-  </style>
-    
-    <input id="myBtn" type="submit" onclick="window.location.href='login.php';" value="logout">
-</div>
+
      
 
 
@@ -205,7 +194,7 @@ input[type='submit']:hover {
 				<div class="profile-tab-nav border-right">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
-							<img src="images\profilepic2.jpg" alt="Image" class="shadow">
+						<img src="https://picsum.photos/200" class="shadow"/>;
 						</div>
 						   <p style="text-align:center;"> <?php echo $_SESSION['username']; ?>!</p>
 					    </div>
@@ -404,6 +393,38 @@ input[type='submit']:hover {
 			</div>
 		</div>
 	</section>
+
+
+	<!-- -------setting page content ends -->
+
+	<!-- logout sesion -->
+	<div  >
+    <style>
+       input[type='submit']{
+    padding: 10px 25px 8px;
+    color: #fff;
+    background-color: #0067ab;
+    text-shadow: rgba(0,0,0,0.24) 0 1px 0;
+    font-size: 16px;
+    box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+    border: 1px solid #0164a5;
+    border-radius: 2px;
+    margin: 10px 60px;
+    cursor:pointer;
+	
+    
+   
+     
+    
+}
+input[type='submit']:hover {
+    background-color: #024978;}
+  </style>
+    
+    <input id="myBtn" type="submit" onclick="window.location.href='login.php';" value="logout">
+</div>
+
+<!-- ---------logout session ended -->
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
